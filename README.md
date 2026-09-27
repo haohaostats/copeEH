@@ -96,7 +96,7 @@ These are actual outputs from the fixed dataset and the shipped code. All outcom
 | treatment | qaly | 3.9174 | 3.9220 | 0.0046 | 0.12 |
 | treatment | state_cost | 290488.82 | 292970.16 | 2481.34 | 0.85 |
 
-PF, PD and life-years are restricted to 20 years and undiscounted. QALYs and state costs use 3% annual discounting. Costs are illustrative currency units, not clinical price estimates.
+PF, PD and life-years are restricted to 20 years and undiscounted. QALYs and state costs use 3% annual discounting.
 
 [Download full-precision CSV](docs/results/outcome_accuracy.csv)
 
