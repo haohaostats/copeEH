@@ -79,8 +79,6 @@ Observed follow-up is 0–10 years; extrapolation is 10–20 years.
 | treatment | PFS | observed | 0.00180 | 0.00811 |
 | treatment | PFS | extrapolated | 0.00142 | 0.00237 |
 
-[Download full-precision CSV](docs/results/curve_accuracy.csv)
-
 ### State times, life-years and QALYs
 
 | Arm | Outcome | Truth | Estimate | Signed error | Relative error (%) |
@@ -98,8 +96,6 @@ Observed follow-up is 0–10 years; extrapolation is 10–20 years.
 
 PF, PD and life-years are restricted to 20 years and undiscounted. QALYs and state costs use 3% annual discounting.
 
-[Download full-precision CSV](docs/results/outcome_accuracy.csv)
-
 ### Incremental economic outcomes
 
 | Result | Incremental LY | Incremental QALY | Incremental cost | ICER | INMB |
@@ -108,8 +104,6 @@ PF, PD and life-years are restricted to 20 years and undiscounted. QALYs and sta
 | estimate | 2.1406 | 1.1932 | 135339.98 | 113422.32 | -16016.04 |
 
 Willingness-to-pay is 100,000 currency units/QALY with 50,000 additional discounted incremental cost. Both truth and estimate indicate more benefit and more cost; both INMB values are negative at this threshold. The proximity to the threshold magnifies relative INMB differences.
-
-[Download full-precision CSV](docs/results/economic_comparison.csv)
 
 ### Regenerate the displayed results
 
@@ -130,27 +124,3 @@ pop <- population_mortality(breaks = c(0, 5, 10),
 
 The last rate continues indefinitely. Real applications must construct an
 appropriate population process using age, sex and calendar-year information.
-
-## Documentation
-
-Use help(package = "copeEH") for function documentation. The installed
-tutorial can be located using:
-
-```r
-system.file("doc", "getting-started.md", package = "copeEH")
-```
-
-R scripts contain no text comments. Explanations are in independent help files
-and the tutorial. Only the method package is included; the paper reproduction
-project, competing methods and clinical datasets are not bundled.
-
-## Development
-
-```text
-R CMD build copeEH
-R CMD check --no-manual copeEH_1.0.0.tar.gz
-```
-
-The package tests use synthetic data and run with base R. The core estimation
-and prediction routines preserve the research implementation, while the public
-interface adds input checks and stores population functions for reuse.
