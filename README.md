@@ -47,7 +47,7 @@ plot(result, type = "state")
 
 In this example, extrapolation MIAE ranges from 0.0014 to 0.0060 and both arm-level
 QALY errors are below 0.15%. The control PD-time error is about -6.1% and the
-incremental ICER error is about +7.2%; all quantities are returned for inspection.
+incremental ICER error is about +7.2%.
 
 Fit each treatment arm separately. Each endpoint needs time and status (1 for
 event, 0 for right censoring). PFS events include progression or death.
@@ -56,7 +56,7 @@ Use years for fitting if using the economic-outcome helpers.
 
 ## Example results
 
-These are actual outputs from the fixed dataset and the shipped code. All outcome rows are shown, including larger errors. Observed follow-up is 0–10 years; extrapolation is 10–20 years.
+Observed follow-up is 0–10 years; extrapolation is 10–20 years.
 
 ### Survival curves
 
@@ -107,7 +107,7 @@ PF, PD and life-years are restricted to 20 years and undiscounted. QALYs and sta
 | truth | 2.0927 | 1.1847 | 125380.22 | 105829.54 | -6906.47 |
 | estimate | 2.1406 | 1.1932 | 135339.98 | 113422.32 | -16016.04 |
 
-Willingness-to-pay is 100,000 currency units/QALY with 50,000 additional discounted incremental cost. Both truth and estimate indicate more benefit and more cost; both INMB values are negative at this threshold. The proximity to the threshold magnifies relative INMB differences. Neither ICER nor INMB is an accuracy guarantee for other applications.
+Willingness-to-pay is 100,000 currency units/QALY with 50,000 additional discounted incremental cost. Both truth and estimate indicate more benefit and more cost; both INMB values are negative at this threshold. The proximity to the threshold magnifies relative INMB differences.
 
 [Download full-precision CSV](docs/results/economic_comparison.csv)
 
@@ -118,8 +118,6 @@ With the package installed, run from the repository root:
 ```text
 Rscript tools/render_demo.R
 ```
-
-This reanalyses the fixed data and writes the CSV, PDF, SVG and PNG files. It does not simulate new data or reproduce the paper's experiments.
 
 ## Population mortality
 
@@ -132,23 +130,6 @@ pop <- population_mortality(breaks = c(0, 5, 10),
 
 The last rate continues indefinitely. Real applications must construct an
 appropriate population process using age, sex and calendar-year information.
-The helper does not download life tables or automatically standardise cohorts.
-
-## Statistical scope
-
-This is a jointly constrained marginal model, not an identified patient-level
-event-history or transition-hazard model. The default degree is 3 and eta is 2;
-the main specification has a free relative-survival tail. These choices remain
-explicit and are not selected using unobserved outcomes.
-
-The working-independence objective cannot recover missing OS/PFS dependence.
-Public methods return point estimates only. Internal inverse Hessians are
-working-likelihood diagnostics, not validated joint sampling covariance.
-Confidence intervals, PSA and automatic model selection are not provided.
-
-Economic helpers integrate PF/PD state costs only. Drug, administration,
-subsequent-treatment, adverse-event and terminal costs require separate inputs.
-All costs must use a common currency and all times a common scale.
 
 ## Documentation
 
