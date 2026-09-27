@@ -56,7 +56,7 @@ Use years for fitting if using the economic-outcome helpers.
 
 ## Example results
 
-These are actual outputs from the fixed dataset and the shipped code. All outcome rows are shown, including larger errors. Observed follow-up is 0–10 years; extrapolation is 10–20 years. The fit receives endpoint data and population mortality, not the stored true coefficients.
+These are actual outputs from the fixed dataset and the shipped code. All outcome rows are shown, including larger errors. Observed follow-up is 0–10 years; extrapolation is 10–20 years.
 
 ### Survival curves
 
