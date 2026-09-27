@@ -45,14 +45,6 @@ plot(result)
 plot(result, type = "state")
 ```
 
-The package contains the fixed dataset, not simulation-generation code.
-Each arm contains 2,000 synthetic patients with ten years of follow-up.
-The known truth belongs to the fitted model family. This deliberately favourable
-teaching setting illustrates use and accuracy; it is not a comparative benchmark
-or a claim of performance in immature clinical trials. The fixed seed was 2026.
-See help("cope_demo") for the construction and all generating parameters.
-cope_example() now loads one arm of these fixed data; it does not generate data.
-
 In this example, extrapolation MIAE ranges from 0.0014 to 0.0060 and both arm-level
 QALY errors are below 0.15%. The control PD-time error is about -6.1% and the
 incremental ICER error is about +7.2%; all quantities are returned for inspection.
