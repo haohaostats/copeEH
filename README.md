@@ -62,13 +62,9 @@ These are actual outputs from the fixed dataset and the shipped code. All outcom
 
 ![Observed KM, known truth and COPE-EH survival curves](docs/figures/demo_survival.svg)
 
-[Vector PDF](docs/figures/demo_survival.pdf) · [Vector SVG](docs/figures/demo_survival.svg) · [300-dpi PNG](docs/figures/demo_survival.png)
-
 ### Health-state probabilities
 
 ![Known and predicted PF and PD probabilities](docs/figures/demo_states.svg)
-
-[Vector PDF](docs/figures/demo_states.pdf) · [Vector SVG](docs/figures/demo_states.svg) · [300-dpi PNG](docs/figures/demo_states.png)
 
 ### Curve accuracy
 
