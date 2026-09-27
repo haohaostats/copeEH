@@ -1,7 +1,13 @@
-# copeEH
+<p align="center">
+  <img src="docs/figures/logo.svg" width="180" alt="COPE-EH logo">
+</p>
 
-Coherent population-mortality-adjusted extrapolation of marginal overall
-survival (OS) and progression-free survival (PFS).
+<h1 align="center">COPE-EH</h1>
+
+<p align="center">
+  Coherent Population-Mortality-Adjusted Extrapolation of<br>
+  Overall and Progression-Free Survival for Cost-Effectiveness Analysis
+</p>
 
 ## Installation
 
