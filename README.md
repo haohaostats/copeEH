@@ -3,9 +3,6 @@
 Coherent population-mortality-adjusted extrapolation of marginal overall
 survival (OS) and progression-free survival (PFS).
 
-Version **1.0.0** · **GPL-3** · Not published on CRAN. R >= 4.1.0
-is required; all runtime dependencies ship with R.
-
 ## Installation
 
 Download [source (.tar.gz)](https://github.com/haohaostats/copeEH/releases/download/v1.0.0/copeEH_1.0.0.tar.gz) or [Windows binary (.zip)](https://github.com/haohaostats/copeEH/releases/download/v1.0.0/copeEH_1.0.0.zip) from the [v1.0.0 release](https://github.com/haohaostats/copeEH/releases/tag/v1.0.0).
@@ -188,6 +185,3 @@ R CMD check --no-manual copeEH_1.0.0.tar.gz
 The package tests use synthetic data and run with base R. The core estimation
 and prediction routines preserve the research implementation, while the public
 interface adds input checks and stores population functions for reuse.
-## Validation
-
-Tested locally with R 4.5.2 on Windows: `R CMD check --no-manual --no-vignettes` returned **Status: OK**. Package examples and both test scripts passed. The Windows archive was installed into a separate library and the fixed demo rerun successfully. This is a local validation result, not CRAN certification or a cross-platform test claim.
