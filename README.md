@@ -105,14 +105,6 @@ PF, PD and life-years are restricted to 20 years and undiscounted. QALYs and sta
 
 Willingness-to-pay is 100,000 currency units/QALY with 50,000 additional discounted incremental cost. Both truth and estimate indicate more benefit and more cost; both INMB values are negative at this threshold. The proximity to the threshold magnifies relative INMB differences.
 
-### Regenerate the displayed results
-
-With the package installed, run from the repository root:
-
-```text
-Rscript tools/render_demo.R
-```
-
 ## Population mortality
 
 Supply consistent vectorised survival(t) and hazard(t) functions or use:
