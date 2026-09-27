@@ -1,0 +1,23 @@
+library(copeEH)
+dir.create("docs/figures", recursive = TRUE, showWarnings = FALSE)
+dir.create("docs/results", recursive = TRUE, showWarnings = FALSE)
+result <- run_cope_demo()
+utils::write.csv(result$accuracy, "docs/results/curve_accuracy.csv", row.names = FALSE)
+utils::write.csv(result$outcomes, "docs/results/outcome_accuracy.csv", row.names = FALSE)
+utils::write.csv(result$economic, "docs/results/economic_comparison.csv", row.names = TRUE)
+for (kind in c("survival", "state")) {
+  name <- if (kind == "survival") "demo_survival" else "demo_states"
+  path <- file.path("docs/figures", name)
+  grDevices::pdf(paste0(path, ".pdf"), width = 9, height = 6.8, useDingbats = FALSE)
+  plot(result, type = kind)
+  grDevices::dev.off()
+  grDevices::svg(paste0(path, ".svg"), width = 9, height = 6.8)
+  plot(result, type = kind)
+  grDevices::dev.off()
+  grDevices::png(paste0(path, ".png"), width = 2700, height = 2040, res = 300)
+  plot(result, type = kind)
+  grDevices::dev.off()
+}
+print(result$accuracy)
+print(result$outcomes)
+print(result$economic)

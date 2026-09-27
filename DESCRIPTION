@@ -1,0 +1,21 @@
+Package: copeEH
+Type: Package
+Title: Coherent Population-Mortality-Adjusted Survival Extrapolation
+Version: 1.0.0
+Authors@R: person("Hao", "Chen", email = "hche2036@uni.sydney.edu.au",
+    role = c("aut", "cre"))
+Description: Fits jointly constrained marginal overall and progression-free
+    survival curves using population mortality and transformed Bernstein
+    relative-survival polynomials. Provides coherent health-state predictions,
+    restricted state times, deterministic quality-adjusted life-years and
+    state costs. Estimation uses a working-independence composite likelihood
+    for separately available endpoint data. Patient-level dependence and
+    transition hazards are not identified by this model.
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports: stats, graphics, utils
+NeedsCompilation: no
+LazyData: true
+URL: https://github.com/haohaostats/copeEH
+BugReports: https://github.com/haohaostats/copeEH/issues

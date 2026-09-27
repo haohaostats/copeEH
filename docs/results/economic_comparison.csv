@@ -1,0 +1,3 @@
+"","delta_ly","delta_qaly","delta_cost","icer","inmb","classification"
+"truth",2.0926973271784,1.18473748545276,125380.220750861,105829.538011913,-6906.47220558557,"More effective, more costly"
+"estimate",2.14057662476546,1.19323938496349,135339.976853451,113422.317901107,-16016.0383571018,"More effective, more costly"
